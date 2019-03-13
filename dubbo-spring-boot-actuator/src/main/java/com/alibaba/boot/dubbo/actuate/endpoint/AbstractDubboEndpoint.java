@@ -102,6 +102,7 @@ public abstract class AbstractDubboEndpoint implements ApplicationContextAware, 
     }
 
     protected ReferenceAnnotationBeanPostProcessor getReferenceAnnotationBeanPostProcessor() {
+        ReferenceAnnotationBeanPostProcessor referenceAnnotationBeanPostProcessor = null;
         return applicationContext.getBean(BEAN_NAME, ReferenceAnnotationBeanPostProcessor.class);
     }
 

@@ -16,6 +16,7 @@
  */
 package com.alibaba.boot.dubbo.actuate.endpoint;
 
+import com.alibaba.dubbo.config.DubboShutdownHook;
 import com.alibaba.dubbo.config.ProtocolConfig;
 import com.alibaba.dubbo.config.spring.ServiceBean;
 import com.alibaba.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor;
@@ -49,7 +50,7 @@ public class DubboShutdownEndpoint extends AbstractDubboEndpoint {
         // protocols
         int protocolsCount = getProtocolConfigsBeanMap().size();
 
-        ProtocolConfig.destroyAll();
+        DubboShutdownHook.getDubboShutdownHook().destroyAll();
         shutdownCountData.put("registries", registriesCount);
         shutdownCountData.put("protocols", protocolsCount);
 

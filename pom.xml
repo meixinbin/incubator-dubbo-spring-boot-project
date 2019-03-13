@@ -23,14 +23,14 @@
     </properties>
     <groupId>com.alibaba.boot</groupId>
     <artifactId>dubbo-spring-boot-project</artifactId>
-    <version>0.2.1-SNAPSHOT</version>
+    <version>0.2.3-SNAPSHOT</version>
 
     <packaging>pom</packaging>
 
     <name>Dubbo Spring Boot Project</name>
     <description>Dubbo Spring Boot Project</description>
     <url>https://github.com/apache/incubator-dubbo-spring-boot-project</url>
-    <distributionManagement>
+    <!--<distributionManagement>
         <repository>
             <id>my</id>
             <name>Nexus Release Repository</name>
@@ -41,6 +41,19 @@
             <name>Nexus Snapshot Repository</name>
             <url>http://nexus.itqy8.com/content/repositories/snapshots</url>
         </snapshotRepository>
+    </distributionManagement>-->
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <name>Nexus Release Repository</name>
+            <url>http://10.0.22.18/repository/dev5-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://10.0.22.18/repository/dev5-snapshots/</url>
+        </snapshotRepository>
+
     </distributionManagement>
     <modules>
         <module>dubbo-spring-boot-parent</module>
